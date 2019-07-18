@@ -1,23 +1,13 @@
-def Euclidean_Algorithm(x,y):
+def hcf(x,y):  # Using the Euclidean Algorithm to compute the highest common factor
     if x < y:
         y,x = x,y
     if x % y == 0:
-        print("hcf({},{}) = {}".format(x,y,y))
-        return
+        return y  # The result will return only the hcf of x and y
     else:
-        old_x, old_y  = x,y
         x , y= y ,x % y
-        print("hcf({},{}) = ".format(old_x,old_y), end='')
-        return Euclidean_Algorithm(x,y)
+        return hcf(x,y)
 
 
-switch = 1
-while switch == True:
-    try:
-        x = int(input("Input the first number"))
-        y = int(input("Input the second number"))
-        Euclidean_Algorithm(x,y)
-        switch = 0
-    except ValueError:
-        print("Please input a number")
+def lcm(x,y):  # By the lemma(The multiplication of lcm(x,y) and hcf(x,y) is equal to x times y
+    return x * y / hcf(x,y)
 
