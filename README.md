@@ -1,2 +1,4 @@
-# Euclidean-Algorithm
-Using the Euclidean Algorithm to find the Highest Common Factor of two Values
+# Integer functions
+Using python to compute simple Math functions include
+1.The Highest Common Factor(hcf)
+2.The Lowest Common Multiplies(lcm)
